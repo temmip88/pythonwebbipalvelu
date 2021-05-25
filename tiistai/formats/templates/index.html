@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method=POST>
+	name:<br>
+	<input type="text" name="name"><br>
+
+	password:<br>
+	<input type="text" name="password"><br>
+
+	email:<br>
+	<input type="email" name="email"><br>
+
+	<input type="submit" value="submit"<br>
+
+	<label>I like beer
+	<input type=checkbox name="likebeer"></label><br>
+
+	<input type="date" value="date"><br>
+
+</form>
+{% endblock content %}
