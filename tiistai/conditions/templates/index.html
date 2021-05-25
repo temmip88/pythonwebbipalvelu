@@ -1,0 +1,12 @@
+{% extends "base2.html"  %}
+
+{% block headline %}
+	<h1>Hattuja</h1>
+{% endblock headline %}
+{% block body %}
+	{% if hats %}
+		<p>We have hats</p>
+	{% else %}
+		<p>No hats yet, would you like to add one?</p>
+	{% endif %}
+{% endblock body %}
