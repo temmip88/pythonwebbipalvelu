@@ -33,9 +33,15 @@ def addForm():
     form = CommentForm()
     return render_template("new.html", form = form)
 
+@app.route("/msg")
+def msgPage():
+    flash("Clear skies")
+    return redirect("/")
+
 
 @app.route("/")
 def index():
+    flash("A magical place")
     sammakot = Sammakot.query.all()
     return render_template("index.html", sammakot=sammakot)
 
