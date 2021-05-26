@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
+	{% if get_flashed_messages() %}
+                {% for message in get_flashed_messages() %}
+                        <p><b>{{ message }}</b></p>
+                {% endfor %}
+        {% endif %}
+
 	{% for sammakot in sammakot %}
 	<p>{{ sammakot.name }}: {{ sammakot.country }}: {{ sammakot.year }}</p>
 	{% endfor %}
