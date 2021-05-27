@@ -54,6 +54,16 @@ def addNew(id=None):
 
     return render_template("new.html", form=form) #m
 
+@app.route("/<int:id>/delete")
+def deleteGun(id):
+    addGun = gunDay.query.get_or_404(id)
+    db.session.delete(addGun)
+    db.session.commit()
+    
+    flash("Deleted")
+    return redirect("/")
+
+
 @app.route("/")
 def index():
     addGuns = gunDay.query.all() #m
