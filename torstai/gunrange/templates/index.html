@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for addGun in addGuns %}
+<p> {{ addGun.gunType }}: {{ addGun.gunRange }}: {{ addGun.visit }} - <a href="{{ addGun.id }}/edit">Edit</a> </p>
+{% endfor %}
+
+{% endblock content %}
