@@ -6,7 +6,6 @@ from wtforms.ext.sqlalchemy.orm import model_form #m
 SQLALCHEMY_TRACK_MODIFICATIONS=True
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = "fa7eengauzeeBohVaikoh1Aecae3ei"
 db = SQLAlchemy(app) #m
 
