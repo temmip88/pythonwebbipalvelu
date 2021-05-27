@@ -38,6 +38,10 @@ def msgPage():
     flash("Clear skies")
     return redirect("/")
 
+@app.route("/anothermsg")
+def anotherMsg():
+    flash("Cheeky breeky")
+    return redirect("/")
 
 @app.route("/")
 def index():
