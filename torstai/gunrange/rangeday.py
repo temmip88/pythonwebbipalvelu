@@ -37,7 +37,7 @@ def initDB():
 def addNew(id=None):
     addGun = gunDay()
     if id:
-        addGun = gunDay.query.get(id)
+        addGun = gunDay.query.get_or_404(id)
 
     form = gunRangeForm(obj=addGun) #m
 
