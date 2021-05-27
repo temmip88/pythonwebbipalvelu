@@ -35,14 +35,14 @@ def newExpansion(): #m
 
     if form.validate_on_submit(): #m
         expansion = WOWexpansion() #m
-        form.populate_obj(expansion)
+        form.populate_obj(expansion) #m
 
         db.session.add(expansion) #m
         db.session.commit() #m
 
-        print("Added your expansion, thanks.")
-        flash("Added")
-        return redirect("/")
+        print("Added your expansion, thanks.") #m
+        flash("Added") #m
+        return redirect("/") #m
     
     return render_template("new.html", form=form)
 
