@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for expansion in expansions %}
+<p> {{ expansion.name }}: {{ expansion.year }} </p>
+{% endfor %}
+
+{% endblock content %}
