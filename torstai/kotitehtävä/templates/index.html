@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for lisaaHlo in lisaaHlot %}
+<p> <b>Nimi: </b> {{lisaaHlo.name}} <b>Osoite: </b> {{lisaaHlo.address}} <b>EMAIL: </b> {{lisaaHlo.email}} <a href="{{ lisaaHlo.id }}/edit">Edit</a> - <a href="{{ lisaaHlo.id }}/delete">Delete</a>  </p>
+{% endfor %}
+
+{% endblock content %}
