@@ -1,0 +1,19 @@
+{% set title="Lisää uusi henkilö osoitekirjaan" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1> Lisää uusi henkilö </h1>
+
+<form method=POST>
+        {% for field in form %}
+                <p>{% if not field.flags.hidden %}
+                        {{ field.label }}<br>
+                {% endif %}
+                        {{ field }}</p>
+        {% endfor %}
+
+        <input type=submit>
+</form>
+
+{% endblock content %}
