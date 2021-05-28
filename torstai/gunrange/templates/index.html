@@ -3,7 +3,7 @@
 {% block content %}
 
 {% for addGun in addGuns %}
-<p> {{ addGun.gunType }}: {{ addGun.gunRange }}: {{ addGun.visit }} - <a href="{{ addGun.id }}/edit">Edit</a> - <a href="{{ addGun.id }}/delete">Delete</a> </p>
+<p> <b>Tyyppi: </b>{{ addGun.gunType }} <b>Kaliiberi: </b> {{addGun.gunCaliber}} <b>KPL: </b> {{ addGun.howMany}}  <b>Paikka: </b> {{ addGun.gunRange }} <b>Aika: </b> {{ addGun.visit }} - <a href="{{ addGun.id }}/edit">Edit</a> - <a href="{{ addGun.id }}/delete">Delete</a>  </p>
 {% endfor %}
 
 {% endblock content %}
