@@ -21,16 +21,17 @@ gunRangeForm = model_form(gunDay, base_class=FlaskForm, db_session=db.session) #
 def initDB():
     db.create_all()
 
-    addGun = gunDay(gunType="Pistooli", gunRange="Osuva Kamppi", visit="16.5.2020")
+    addGun = gunDay(gunType="Pistooli", gunCaliber="9mm", howMany="50kpl",  gunRange="Osuva Kamppi", visit="16.5.2020")
     db.session.add(addGun)
 
-    addGun = gunDay(gunType="Pistooli", gunRange="Osuva Tähtitorninmäki", visit="23.6.2020")
+    addGun = gunDay(gunType="Pistooli", gunCaliber="9mm", howMany="50kpl", gunRange="Osuva Tähtitorninmäki", visit="23.6.2020")
     db.session.add(addGun)
 
-    addGun = gunDay(gunType="Revolveri", gunRange="Joensuu SAR", visit="1.10.2020")
+    addGun = gunDay(gunType="Revolveri",gunCaliber=".38", howMany="100kpl", gunRange="Joensuu SAR", visit="1.10.2020")
     db.session.add(addGun)
 
     db.session.commit()
+
 
 @app.route("/<int:id>/edit", methods=["GET", "POST"])
 @app.route("/new", methods=["GET", "POST"])
