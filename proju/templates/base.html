@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang=en>
+        <head>
+                <title> Range day diary </title>
+                <meta charset="utf-8">
+                <meta name=viewport content="width=device-width, initial-scale=1">
+        </head>
+        <body>
+                <nav>
+                        <a href="/">Home</a>
+                        <a href="/new">New</a>
+			{% if currentUser() %}
+				        <a href="/user/logout">Logout</a> -
+				        {{ currentUser().email }} -
+			            {% else %}
+				        <a href="/user/login">Login</a> -
+				        <a href="/user/register">Register</a>
+			{% endif %}
+                </nav>
+
+		{% for msg in get_flashed_messages() %}
+			<p><b> {{ msg }}</b> </p>
+		{% endfor %}
+
+                <h1> Range day diary </h1>
+                {% block content %}
+                {% endblock content %}
+        </body>
+</html>
